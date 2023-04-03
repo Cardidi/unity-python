@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using IronPython.Hosting;
 using IronPython.Runtime;
 
