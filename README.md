@@ -1,30 +1,13 @@
-# Warning
-**This repository is no longer maintained.** This repository will not be
-updated and I will not respond to support requests. There are a few reasons
-for why this is:
-
-* Python 2 was deprecated on January 1, 2020.
-* As of this writing, IronPython does not have a stable release for Python 3.
-* Updating to newer versions of IronPython for Python 2 does not appear to be
-  straightforward as IronPython links against newer versions of DLLs that
-  Unity uses.
-* pip dropped support for Python 2 in January 2021
-* I no longer use Unity.
-
-This makes it difficult for me to keep the repository up to date and provide
-support. If you are interested in taking over, I would recommend putting
-your energy towards moving to Python 3 using IronPython 3 instead of
-continuing to use IronPython 2. Let me know if this is what you would like to
-do; I can provide some limited advice based on my experience making this
-library and I can redirect users to your library when it's ready.
-
-
 # UnityPython
 UnityPython is a plugin for Unity3D that provides support for running Python
-2.x code in Unity3D on any platform which supports `System.Reflection.Emit`.
+3.x code in Unity3D on any platform which supports `System.Reflection.Emit`
+with out-of-the-box experience.
 
 Special thanks to the developers of IronPython who developed the open-source
-integration of Python and .NET, which this plugin uses.
+integration of Python and .NET, which this plugin uses and @exodrifter who 
+is the original author of this plugin.
+
+This page is lack of maintain and I will update this later.
 
 
 ## Requirements
@@ -90,5 +73,5 @@ An example is provided below. More examples can be found in the
 	}
 
 
-[releases]: https://github.com/exodrifter/unity-python/releases
+[releases]: https://github.com/Cardidi/unity-python/releases
 [discussions/36]: https://github.com/exodrifter/unity-python/discussions/36

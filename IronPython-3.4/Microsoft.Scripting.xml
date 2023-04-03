@@ -1341,7 +1341,7 @@
         </member>
         <member name="T:Microsoft.Scripting.Hosting.ScriptRuntime">
             <summary>
-            Represents a Dynamic Language Runtime in Hosting API. 
+            Represents a Dynamic Language Runtime in Hosting API.
             Hosting API counterpart for <see cref="T:Microsoft.Scripting.Runtime.ScriptDomainManager"/>.
             </summary>
         </member>
@@ -1354,7 +1354,7 @@
         </member>
         <member name="M:Microsoft.Scripting.Hosting.ScriptRuntime.CreateFromConfiguration">
             <summary>
-            Creates a new runtime with languages set up according to the current application configuration 
+            Creates a new runtime with languages set up according to the current application configuration
             (using System.Configuration).
             </summary>
         </member>
@@ -1392,20 +1392,20 @@
             <exception cref="T:System.IO.FileNotFoundException">file does exist in language's search path</exception>
         </member>
         <member name="P:Microsoft.Scripting.Hosting.ScriptRuntime.Globals">
-            <summary>
-            This property returns the "global object" or name bindings of the ScriptRuntime as a ScriptScope.  
+             <summary>
+             This property returns the "global object" or name bindings of the ScriptRuntime as a ScriptScope.
             
-            You can set the globals scope, which you might do if you created a ScriptScope with an 
-            IAttributesCollection so that your host could late bind names.
-            </summary>
+             You can set the globals scope, which you might do if you created a ScriptScope with an
+             IAttributesCollection so that your host could late bind names.
+             </summary>
         </member>
         <member name="M:Microsoft.Scripting.Hosting.ScriptRuntime.LoadAssembly(System.Reflection.Assembly)">
             <summary>
-            This method walks the assembly's namespaces and name bindings to ScriptRuntime.Globals 
-            to represent the types available in the assembly.  Each top-level namespace name gets 
-            bound in Globals to a dynamic object representing the namespace.  Within each top-level 
-            namespace object, nested namespace names are bound to dynamic objects representing each 
-            tier of nested namespaces.  When this method encounters the same namespace-qualified name, 
+            This method walks the assembly's namespaces and name bindings to ScriptRuntime.Globals
+            to represent the types available in the assembly.  Each top-level namespace name gets
+            bound in Globals to a dynamic object representing the namespace.  Within each top-level
+            namespace object, nested namespace names are bound to dynamic objects representing each
+            tier of nested namespaces.  When this method encounters the same namespace-qualified name,
             it merges names together objects representing the namespaces.
             </summary>
             <param name="assembly"></param>
