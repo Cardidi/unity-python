@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using UnityEngine;
 
 namespace Exodrifter.UnityPython
@@ -22,23 +23,23 @@ namespace Exodrifter.UnityPython
     {
     
     	public static ScriptEngine CreateEngine(UnityPythonCreationSetting setting)
-    	{
-    		var engine = Python.CreateEngine(setting.Options);
+        {
+	        var runtime = Python.CreateRuntime(setting.Options);
     
     		// Redirect IronPython IO
     		if (setting.RedirectStandardOutputStream)
-    		{
-    			var infoStream = new MemoryStream();
-    			var infoWriter = new UniPyLogWriter(Debug.Log, infoStream);
-    			engine.Runtime.IO.SetOutput(infoStream, infoWriter);
+            {
+	            var infoStream = new UniPyLogStream(Debug.Log);
+                runtime.IO.SetOutput(infoStream, Encoding.UTF8);
     		}
     
     		if (setting.RedirectStandardErrorStream)
-    		{
-    			var errorStream = new MemoryStream();
-    			var errorWriter = new UniPyLogWriter(Debug.LogError, errorStream);
-    			engine.Runtime.IO.SetErrorOutput(errorStream, errorWriter);
+            {
+	            var errorStream = new UniPyLogStream(Debug.LogError);
+    			runtime.IO.SetErrorOutput(errorStream, Encoding.UTF8);
     		}
+
+            var engine = Python.GetEngine(runtime);
     
     		// Load assemblies for the `UnityEngine*` namespaces
     		if (setting.IncludeUnityEngine)
