@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Exodrifter.UnityPython.Examples
 {
@@ -6,7 +6,7 @@ namespace Exodrifter.UnityPython.Examples
 	{
 		void Start()
 		{
-			var engine = global::UnityPython.CreateEngine();
+			var engine = UnityPython.CreateEngine();
 			var scope = engine.CreateScope();
 
 			string code = "import UnityEngine\n";
