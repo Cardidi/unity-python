@@ -1,7 +1,6 @@
 # UnityPython
 UnityPython is a plugin for Unity3D that provides support for running Python
-3.x code in Unity3D on any platform which supports `System.Reflection.Emit`
-with out-of-the-box experience.
+3.x code in Unity3D with out-of-the-box experience.
 
 Special thanks to the developers of IronPython who developed the open-source
 integration of Python and .NET, which this plugin uses and @exodrifter who 
